@@ -1,10 +1,17 @@
-public class Angajat implements Company {
+import java.util.List;
+
+public class Angajat implements Company, Comparable<Angajat>{
  Nume name;
  Domiciliu adress;
  ReviewAngajat review;
  Date data;
 
-   @Override
+    @Override
+    public int compareTo(Angajat o) {
+        return this.review.salariu-o.review.salariu;
+    }
+
+    @Override
    public void getinfo() {
        System.out.println("This class it's made to create an employee identity by structuring the base class 'Angajat' with" +
                "classes 'Nume' , 'Domiciliu','ReviewAngajat','Date' which contain informations about the worker");
