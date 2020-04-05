@@ -1,5 +1,6 @@
 import java.sql.SQLOutput;
 import java.util.*;
+
 public class Main {
     static Vector<Departament[]> depart=new Vector<Departament[]>();
     static Vector<Jobs> jobs=new Vector<Jobs>();
@@ -34,6 +35,7 @@ public class Main {
         update(employee);
         jobs.get(rand.nextInt(jobs.size())).getcalcul(employee);
         employees.add(employee);
+        Collections.sort(employees);
 
     }
     static void update(Angajat x){
