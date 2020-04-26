@@ -187,7 +187,7 @@ public class Services {static Vector<Departament[]> depart=new Vector<Departamen
         Scanner scanner=new Scanner(System.in);
         int x=1;
         while(x!=0) {
-            System.out.println("Introduce command:1-Initialization of an employee 2-Introduce data in file,3-Extract data from file to program,4-Show productive employees,5-Promote Someone,0-Exit");
+            System.out.println("Introduce command:1-Initialization of an employee 2-Introduce data in file,3-Extract data from file to program,4-Show productive employees,5-Promote Someone(Only for software engineers),0-Exit");
 
             x=scanner.nextInt();
             if(x==1)
@@ -203,8 +203,9 @@ public class Services {static Vector<Departament[]> depart=new Vector<Departamen
                 System.out.println("Introduce an employee ID to raise in hierarchy: ");
                 int val=scanner.nextInt();
                 Angajat ang = employees.stream().filter(obj -> obj.getName().getid() == val).findFirst().orElse(null);
+                String beforeUpgrade=ang.getReview().getPosition();
                 update(ang);
-                System.out.println(ang.toString());
+                System.out.println("The employee changed subdepartment from "+beforeUpgrade+" to    "+ang.getReview().getPosition());
             }
 
         }
