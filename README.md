@@ -1,1 +1,1 @@
-This is the repository made for all my Java works as a Student
+This repository it's dedicated for all my Java works as a Student
