@@ -14,7 +14,6 @@ public class Nume extends Company{
         this.nume = nume;
         this.prenume = prenume;
         this.CNP = CNP;
-        this.seria = seria;
     }
     boolean director(){
         if (CNP%1000==570 && nume.equals("Andreescu") && prenume.equals("Mihai"))

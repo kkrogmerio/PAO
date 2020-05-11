@@ -13,6 +13,14 @@ public class DepartamentAdmin extends Departament{
     }
 
     @Override
+    public String toString() {
+        return "DepartamentAdmin{" +
+                "nume='" + nume + '\'' +
+                ", myId=" + myId +
+                '}';
+    }
+
+    @Override
     public void setNume(String val) {
         super.nume=nume;
     }

@@ -12,4 +12,12 @@ public class DepartamentHr extends Departament{
     public DepartamentHr(String nume) {
         super(nume);
     }
+
+    @Override
+    public String toString() {
+        return "DepartamentHr{" +
+                "nume='" + nume + '\'' +
+                ", myId=" + myId +
+                '}';
+    }
 }

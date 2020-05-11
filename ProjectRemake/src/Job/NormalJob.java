@@ -7,18 +7,27 @@ public class NormalJob extends Jobs {
 int amount;
 
     public NormalJob() {
+        super("normal");
         Random rand = new Random();
         this.amount = rand.nextInt(900) + 100;
+
+    }
+
+    @Override
+    public String toString() {
+        return "NormalJob{" +
+                "amount=" + amount +
+                ", myId=" + myId +
+                '}';
     }
 
     @Override
     public void getinfo() {
         System.out.println("This class it's used to create a job for a healthy person");
     }
-
     @Override
     public int getid() {
-        return hashCode();
+        return myId;
     }
 
     public int getAmount() {

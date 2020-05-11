@@ -5,7 +5,8 @@ public class Angajat extends Company implements Comparable<Angajat>{
  private Domiciliu adress;
  private ReviewAngajat review;
  private Date data;
-
+ private int departID;
+ private int jobID;
     @Override
     public int compareTo(Angajat o) {
         return this.getReview().getSalariu()-o.getReview().getSalariu();
@@ -16,6 +17,22 @@ public class Angajat extends Company implements Comparable<Angajat>{
        System.out.println("This class it's made to create an employee identity by structuring the base class 'DetaliiAngajat.Angajat' with" +
                "classes 'DetaliiAngajat.Nume' , 'DetaliiAngajat.Domiciliu','DetaliiAngajat.ReviewAngajat','DetaliiAngajat.Date' which contain informations about the worker");
    }
+
+    public int getDepartID() {
+        return departID;
+    }
+
+    public void setDepartID(int departID) {
+        this.departID = departID;
+    }
+
+    public int getJobID() {
+        return jobID;
+    }
+
+    public void setJobID(int jobID) {
+        this.jobID = jobID;
+    }
 
     @Override
     public String toString() {

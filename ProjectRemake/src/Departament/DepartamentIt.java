@@ -15,4 +15,11 @@ public class DepartamentIt extends Departament{
     public void setNume(String nume) {
         super.nume = nume;
     }
+
+    @Override
+    public String toString() {
+        return "DepartamentIt{" +
+                "nume='" + nume + '\'' +
+                '}';
+    }
 }

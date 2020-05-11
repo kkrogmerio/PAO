@@ -13,4 +13,12 @@ public class DepartamentShip extends Departament{
     public void setNume(String nume) {
         super.nume = nume;
     }
+
+    @Override
+    public String toString() {
+        return "DepartamentShip{" +
+                "nume='" + nume + '\'' +
+                ", myId=" + myId +
+                '}';
+    }
 }

@@ -6,11 +6,14 @@ import java.util.Random;
 
 public class SpecialJob extends Jobs{
     private int workcond,disability,amount;
+    @Override
     public int getid(){
-    return 0;
+    return myId;
     }
-    public SpecialJob(int workcond, int disability) {
+    public SpecialJob(int workcond, int disability,int idSpecified=0) {
+        super("special");
         this.workcond = workcond;
+        myId=idSpecified;
         this.disability = disability;
         Random rand = new Random();
         this.amount = rand.nextInt(900)+100;
@@ -67,5 +70,15 @@ public class SpecialJob extends Jobs{
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "SpecialJob{" +
+                "workcond=" + workcond +
+                ", disability=" + disability +
+                ", amount=" + amount +
+                ", myId=" + myId +
+                '}';
     }
 }
